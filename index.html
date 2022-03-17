@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Arley | 导航</title>
+<link rel="icon" type="image/png" href="favicon.ico"/>
+<meta http-equiv="content-type" content="*; charset=utf-8" />
+<meta name="description" content="Arley导航" />
+<script type="text/javascript" src="https://arley.fun/onesay/?format=js&charset=utf-8"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/init.js"></script>
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/style-wide.css"/>
+</head>
+<body class="loading">
+	<div id="wrapper">
+	<div id="bg" style="display: none;" class="phone-class"></div>
+	<video src="https://arley.fun/usr/video/2.mp4" class="pc-class" loop width="100%" height="110%" autoplay="autoplay" muted="muted" cue-before:none; id="sp"></video>
+	<div id="overlay"></div>
+	<div id="main">
+<header id="header">
+	<h1>Arley | 导航</h1>
+	<div id="onesay"><script>onesay()</script></div>
+	<nav>
+		<ul>
+			<li><a href="https://arley.fun/" target="_blank" title="博客主页" class="iconfont icon-home2"><span>博客</span></a></li>
+			<li><a href="https://arley.fun/litsis" target="_blank" title="小姐姐壁纸" class="iconfont icon-tupian"><span>壁纸</span></a></li>
+			<li><a href="https://yun.arley.fun/" target="_blank" title="私人云盘" class="iconfont icon-cloud-full"><span>云盘</span></a></li>
+			<li><a href="https://bm.arley.fun/" target="_blank" title="书签导航" class="iconfont icon-labelb"><span>导航</span></a></li>
+		</ul>
+	</nav>
+</header>
+<!-- Footer -->
+<footer id="footer">
+	<div>
+		<img src="public/close.png" onclick="changeVal()" class="ival" style="margin-right:2rem ;" id="voice"/>
+		<img src="public/play.png" onclick="ispaly()" class="ival" id="bofang"/>
+		<img src="public/next.png" onclick="nextPaly()" class="ival" style="margin-left:2rem ;" id="next"/>
+	</div>
+</footer>
+</div>
+</div>
+<script>
+	const srcs = [
+		"https://arley.fun/usr/video/1.mp4",
+		"https://arley.fun/usr/video/2.mp4"
+	]
+	function changeVal(){
+		var voice=document.querySelector("#voice");
+		var video=document.querySelector("#sp");
+		if(video.muted) {
+			video.muted=false;
+			voice.setAttribute("src","public/open.png");
+		}else{
+			video.muted=true;
+			voice.setAttribute("src","public/close.png");
+		}
+	}
+	//播放暂停
+	function ispaly(){
+		var bofang=document.querySelector("#bofang");
+		var video=document.querySelector("#sp");
+		if(video.paused) {
+			bofang.setAttribute("src","public/play.png");
+			video.play();
+		}else {
+			bofang.setAttribute("src","public/pause.png");
+			video.pause();
+		}
+		}
+	//切换
+	function nextPaly() {
+	 	var bofang=document.querySelector("#bofang");
+	 	var video=document.querySelector("#sp");
+		var src = video.src;
+		var index = srcs.indexOf(src);
+		if(index == srcs.length - 1){
+			video.src = srcs[0]
+		 }else{
+		 	video.src = srcs[index + 1];
+		 }
+		//更改播放图标
+		 	bofang.setAttribute("src","public/play.png");
+		 }
+</script>
+<style>
+	.pc-class{
+		object-fit: cover;
+	}
+	@media (max-width: 450px) {
+	.pc-class {
+		display: none;
+	}
+	.phone-class {
+		display: block !important;
+		background-size: 1920px auto !important;
+    		width: 1920px !important;
+	}
+	.ival {
+		display: none;
+	}
+	}
+
+	.ival{
+	height: 25px;
+	width: auto;
+	}
+</style>
+</body>
+</html>
