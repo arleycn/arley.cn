@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2796672 */
-  src: url('iconfont.woff2?t=1646903494240') format('woff2'),
-       url('iconfont.woff?t=1646903494240') format('woff'),
-       url('iconfont.ttf?t=1646903494240') format('truetype');
+  src: url('iconfont.woff2?t=1649513317615') format('woff2'),
+       url('iconfont.woff?t=1649513317615') format('woff'),
+       url('iconfont.ttf?t=1649513317615') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github-fill:before {
+  content: "\e885";
 }
 
 .icon-labelb:before {
