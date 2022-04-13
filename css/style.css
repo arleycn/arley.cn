@@ -324,16 +324,16 @@
 					-o-transition: all 0.2s ease-in-out;
 					-ms-transition: all 0.2s ease-in-out;
 					transition: all 0.2s ease-in-out;
-					border-radius: 100%;
+					border-radius: 15%;
 					border: solid 1px white;
 					display: block;
 					font-size: 1.75em;
-					height: 2.5em;
-					line-height: 2.5em;
+					height: 2em;
+					line-height: 2em;
 					position: relative;
 					text-align: center;
 					top: 0;
-					width: 2.5em;
+					width: 2em;
 				}
 
 				#header nav a:hover {
