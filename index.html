@@ -6,11 +6,11 @@
 <link rel="bookmark" type="image/x-icon" href="128x128_favicon.ico"/>
 <meta http-equiv="content-type" content="*; charset=utf-8" />
 <meta name="description" content="Arley导航" />
-<script src="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/js/skel.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/js/init.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/css/iconfont.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/css/style.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/css/style-wide.css"/>
+<script src="js/skel.min.js"></script>
+<script src="js/init.js"></script>
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.min.css"/>
+<link rel="stylesheet" href="css/style-wide.css"/>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -43,9 +43,9 @@ var _hmt = _hmt || [];
 <!-- Footer -->
 <footer id="footer">
 	<div>
-		<img src="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/close.png" onclick="changeVal()" class="ival" style="margin-right:2rem ;" id="voice"/>
-		<img src="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/play.png" onclick="ispaly()" class="ival" id="bofang"/>
-		<img src="https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/next.png" onclick="nextPaly()" class="ival" style="margin-left:2rem ;" id="next"/>
+		<img src="public/close.png" onclick="changeVal()" class="ival" style="margin-right:2rem ;" id="voice"/>
+		<img src="public/play.png" onclick="ispaly()" class="ival" id="bofang"/>
+		<img src="public/next.png" onclick="nextPaly()" class="ival" style="margin-left:2rem ;" id="next"/>
 	</div>
 </footer>
 </div>
@@ -60,10 +60,10 @@ var _hmt = _hmt || [];
 		var video=document.querySelector("#sp");
 		if(video.muted) {
 			video.muted=false;
-			voice.setAttribute("src","https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/open.png");
+			voice.setAttribute("src","public/open.png");
 		}else{
 			video.muted=true;
-			voice.setAttribute("src","https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/close.png");
+			voice.setAttribute("src","public/close.png");
 		}
 	}
 	//播放暂停
@@ -71,10 +71,10 @@ var _hmt = _hmt || [];
 		var bofang=document.querySelector("#bofang");
 		var video=document.querySelector("#sp");
 		if(video.paused) {
-			bofang.setAttribute("src","https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/play.png");
+			bofang.setAttribute("src","public/play.png");
 			video.play();
 		}else {
-			bofang.setAttribute("src","https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/pause.png");
+			bofang.setAttribute("src","public/pause.png");
 			video.pause();
 		}
 		}
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
 		 	video.src = srcs[index + 1];
 		 }
 		//更改播放图标
-		 	bofang.setAttribute("src","https://cdn.jsdelivr.net/gh/arleycn/arleycn.github.io@latest/public/play.png");
+		 	bofang.setAttribute("src","public/play.png");
 		 }
 </script>
 <style>
